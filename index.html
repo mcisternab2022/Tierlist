@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tier Maker - juegos</title>
+        <link rel="shortcut icon" href="img/logo.webp" type="image/x-icon" />
+        <link rel="stylesheet" href="styles.css" />
+
+        <script type="module" src="main.js"></script>
+    </head>
+
+    <body>
+        <header id="top-header">
+            <img src="img/tiermaker-logo.png" />
+        </header>
+
+        <section class="tier">
+            <div class="row">
+                <aside class="label">
+                    <span contenteditable="true">GOTY</span>
+                </aside>
+            </div>
+
+            <div class="row">
+                <aside class="label" style="--level: var(--color-d)">
+                    <span contenteditable="true">Juegazo</span>
+                </aside>
+            </div>
+
+            <div class="row">
+                <aside class="label" style="--level: var(--color-c)">
+                    <span contenteditable="true">Bueno</span>
+                </aside>
+            </div>
+
+            <div class="row">
+                <aside class="label" style="--level: var(--color-b)">
+                    <span contenteditable="true">Regular</span>
+                </aside>
+            </div>
+
+            <div class="row">
+                <aside class="label" style="--level: var(--color-a)">
+                    <span contenteditable="true">Malísimo</span>
+                </aside>
+            </div>
+
+            <div class="row">
+                <aside class="label" style="--level: var(--color-s)">
+                    <span contenteditable="true">Mejor Regalarlo</span>
+                </aside>
+            </div>
+        </section>
+
+        <footer id="selector">
+            <section id="selector-buttons">
+                <label title="Agregar Imágenes">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                        <path d="M9 12h6" />
+                        <path d="M12 9v6" />
+                    </svg>
+                    <input
+                        multiple
+                        accept="image/*"
+                        id="image-input"
+                        type="file"
+                        hidden
+                    />
+                </label>
+
+                <button id="reset-tier-button" title="Reiniciar Tierlist">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4.05 11a8 8 0 1 1 .5 4m-.5 5v-5h5" />
+                    </svg>
+                </button>
+
+                <button id="save-tier-button" title="Guardar Tierlist">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-device-floppy"
+                    >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"
+                        />
+                        <path d="M12 14m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M14 4l0 4l-6 0l0 -4" />
+                    </svg>
+                </button>
+
+                <button id="erase-button" title="Borrar todo">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-eraser"
+                    >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M19 20h-10.5l-4.21 -4.3a1 1 0 0 1 0 -1.41l10 -10a1 1 0 0 1 1.41 0l5 5a1 1 0 0 1 0 1.41l-9.2 9.3"
+                        />
+                        <path d="M18 13.3l-6.3 -6.3" />
+                    </svg>
+                </button>
+            </section>
+
+            <section id="selector-items">
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/bully.webp"
+                    alt="bully"
+                    title="bully"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/dragonballzbudokaitenkaichi3.webp"
+                    alt="dragon ball z"
+                    title="dragon ball z budokai tenkaichi 3"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/crashtitans.jpg"
+                    alt="Crash of the Titans"
+                    title="Crash of the Titans"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/lossimpsonhitrun.jfif"
+                    alt="Los Simpson Hit Run"
+                    title="Los Simpson Hit Run"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/elpadrino.jpg"
+                    alt="el padrino"
+                    title="el padrino"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/godofwar1.jpg"
+                    alt="god of war"
+                    title="god of war 1"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/godofwar2.jpg"
+                    alt="god of war 2"
+                    title="god of war 2"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/shaolinmonks.jpg"
+                    alt="mortal kombat shaolinks monks"
+                    title="mortal kombat shaolinks monks"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/gtasanandreas.jpg"
+                    alt="gta san andreas"
+                    title="gta san andreas"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/bigmutha.jfif"
+                    alt="Big Mutha Truckers 2"
+                    title="Big Mutha Truckers 2"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/legend.jfif"
+                    alt="legend of the Dragon"
+                    title="legend of the Dragon"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/legobatman2.jpg"
+                    alt="lego batman"
+                    title="lego batman"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/legoindianajones.jpg"
+                    alt="lego indiana jones"
+                    title="lego indiana jones"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/legostarwars.jpg"
+                    alt="lego star wars"
+                    title="lego star wars"
+                />
+                <img
+                    class="item-image"
+                    draggable="true"
+                    src="img/godhand.jpg"
+                    alt="God Hand"
+                    title="God Hand"
+                />
+            </section>
+        </footer>
+    </body>
+</html>
